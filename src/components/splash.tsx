@@ -5,6 +5,7 @@
 import Link from "next/link";
 import { SVGProps } from "react";
 import Header from "./header";
+import LinkCard from "./linkCard";
 
 export default function Splash() {
   return (
@@ -15,56 +16,36 @@ export default function Splash() {
       <main className="flex-1">
         <section className="h-dvh w-full xl:py-24">
           <div className="flex h-full flex-col items-center justify-center gap-4 px-4 text-center">
-            <div className="space-y-2">
-              <Header />
-              <p className="max-w-[600px] text-red-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-red-400">
-                I make pretty things on the Internet
-              </p>
-            </div>
+            <Header />
             <div className="mx-auto grid w-full max-w-[800px] grid-cols-4 items-stretch gap-4 sm:gap-6">
-              <Link
-                className="flex grid-rows-2 flex-col items-center justify-between rounded-xl border border-red-200 bg-white p-4 text-sm shadow-sm transition-colors hover:bg-red-100 hover:text-red-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-950 dark:border-gray-800"
+              <LinkCard
+                title="Github"
+                desc="View my projects"
                 href="https://github.com/emmyrlim/"
-                target="_blank"
               >
                 <GithubIcon className="h-6 w-6" />
-                <div className="font-semibold text-red-900">GitHub</div>
-                <div className="text-xs text-red-500 dark:text-red-400">
-                  View my projects
-                </div>
-              </Link>
-              <Link
-                className="flex grid-rows-2 flex-col items-center justify-between rounded-xl border border-red-200 bg-white p-4 text-sm shadow-sm transition-colors hover:bg-red-100 hover:text-red-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-950 dark:border-gray-800"
-                href="https://codepen.io/emmyrlim"
-                target="_blank"
+              </LinkCard>
+              <LinkCard
+                title="CodePen"
+                desc="Demos & Experiments"
+                href="https://www.linkedin.com/in/emmyrlim/"
               >
                 <CodepenIcon className="h-6 w-6" />
-                <div className="font-semibold text-red-900">CodePen</div>
-                <div className="text-xs text-red-500 dark:text-red-400">
-                  Demos & experiments
-                </div>
-              </Link>
-              <Link
-                className="flex grid-rows-2 flex-col items-center justify-between rounded-xl border border-red-200 bg-white p-4 text-sm shadow-sm transition-colors hover:bg-red-100 hover:text-red-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-950 dark:border-gray-800"
+              </LinkCard>
+              <LinkCard
+                title="LinkedIn"
+                desc="Connect with me"
                 href="https://www.linkedin.com/in/emmyrlim/"
-                target="_blank"
               >
                 <LinkedinIcon className="h-6 w-6" />
-                <div className="font-semibold text-red-900">LinkedIn</div>
-                <div className="text-xs text-red-500 dark:text-red-400">
-                  Connect with me
-                </div>
-              </Link>
-              <Link
-                className="flex grid-rows-2 flex-col items-center justify-between rounded-xl border border-red-200 bg-white p-4 text-sm shadow-sm transition-colors hover:bg-red-100 hover:text-red-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-950 dark:border-gray-800"
+              </LinkCard>
+              <LinkCard
+                title="Email"
+                desc="Contact me"
                 href="mailto:emmyrlim@gmail.com"
               >
                 <MailIcon className="h-6 w-6" />
-                <div className="font-semibold text-red-900">Email</div>
-                <div className="text-xs text-red-500 dark:text-red-400">
-                  Contact me
-                </div>
-              </Link>
+              </LinkCard>
             </div>
             <div>
               <Link

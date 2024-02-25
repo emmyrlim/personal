@@ -8,11 +8,24 @@
     -moz-text-fill-color: transparent;
     filter: drop-shadow(0 0 2rem #000);
     text-shadow: none !important;
-    background-size: 200% 100%;
+    background-size: 1000% 100%;
     background-position: 0 100%;
-    transition: background-position 4000ms ease;
 }
 
-.rainbowText:hover {
-    background-position: 100%;
+.header:hover .rainbowText {
+    animation-name: rainbowMove;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rainbowMove {
+    0% {
+        background-position: 55% 100%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 55% 100%;
+    }
 }
