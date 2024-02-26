@@ -7,22 +7,6 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
 });
-const barlow = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-barlow",
-});
-const inconsolata = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inconsolata",
-});
-const lato = Inter({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  display: "swap",
-  variable: "--font-lato",
-});
 
 export const metadata: Metadata = {
   title: "Emmy Lim 2024",
@@ -37,11 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${barlow.variable} ${inconsolata.variable} ${lato.variable}`}
-      >
-        {children}
-      </body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }
