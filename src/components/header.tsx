@@ -4,7 +4,12 @@ import React from "react";
 import styles from "./header.module.css";
 import Typestream from "./typestream";
 
-const SUBHEADER = "I make pretty things on the internet";
+const SUBHEADER = [
+  "I make pretty things on the internet",
+  "More than just a pair of hands",
+  "Let's build something delightful together",
+  "Welcome to my corner of the web",
+];
 
 export default function Header() {
   return (
@@ -18,7 +23,7 @@ export default function Header() {
       </h1>
       <Typestream
         className="max-w-[600px] text-red-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-red-400"
-        text="I make pretty things on the internet"
+        text={SUBHEADER[Math.floor(Math.random() * 4)]}
       />
     </div>
   );
