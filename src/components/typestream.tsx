@@ -1,4 +1,6 @@
 import React from "react";
+import classNames from "classnames";
+import styles from "typestream.module.css";
 
 export default function Typestream({
   className,
@@ -29,5 +31,7 @@ export default function Typestream({
       clearTimeout(timeout);
     };
   }, []);
-  return <p className={className}>{subHeader}</p>;
+  return (
+    <p className={classNames(styles.typestream, className)}>{subHeader}</p>
+  );
 }
