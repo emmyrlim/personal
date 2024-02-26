@@ -1,6 +1,10 @@
 "use client";
 
+import React from "react";
 import styles from "./header.module.css";
+import Typestream from "./typestream";
+
+const SUBHEADER = "I make pretty things on the internet";
 
 export default function Header() {
   return (
@@ -12,9 +16,10 @@ export default function Header() {
       >
         Emmy Lim
       </h1>
-      <p className="max-w-[600px] text-red-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-red-400">
-        I make pretty things on the Internet
-      </p>
+      <Typestream
+        className="max-w-[600px] text-red-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-red-400"
+        text="I make pretty things on the internet"
+      />
     </div>
   );
 }

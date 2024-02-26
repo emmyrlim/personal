@@ -17,6 +17,15 @@
         #ebf38b 95%,
         #adfbda 100%
     );
+    --theme-red: #f9371d;
+    --theme-dark-red: #880d1e;
+    --theme-blue: #454e9e;
+    --theme-black: #141115;
+    --theme-gray1: #181818;
+    --theme-gray2: #333333;
+    --theme-gray3: #7e7d7f;
+    --theme-gray4: #d4d3d4;
+    --theme-white: #fbfef9;
 }
 
 body {
@@ -27,6 +36,7 @@ body {
             rgb(var(--background-end-rgb))
         )
         rgb(var(--background-start-rgb));
+    font-family: var(--font-inter);
 }
 
 @layer utilities {

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { SVGProps } from "react";
 import Header from "./header";
 import LinkCard from "./linkCard";
+import Intro from "./intro";
 
 export default function Splash() {
   return (
@@ -50,7 +51,12 @@ export default function Splash() {
             <div>
               <Link
                 className="flex items-center justify-between rounded-xl bg-red-200 p-4 text-sm shadow-sm transition-colors hover:bg-red-300 hover:text-red-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-950"
-                href="#"
+                locale={false}
+                rel="noopener noreferrer"
+                target="_blank"
+                aria-label="Downlod Resume"
+                href="emmy_lim_resume.pdf"
+                download
               >
                 <FileTextIcon className="mr-2 h-6 w-6" />
                 <div className="font-semibold text-red-900">Download my CV</div>
@@ -59,6 +65,7 @@ export default function Splash() {
           </div>
         </section>
       </main>
+      {/* <Intro /> */}
     </div>
   );
 }

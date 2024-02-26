@@ -1,0 +1,50 @@
+.topPane,
+.bottomPane {
+    position: fixed;
+    height: 50vh;
+    /* background-color: var(--theme-gray1); */
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.bottomPane {
+    top: 50vh;
+}
+
+.bannerWrapper {
+    position: fixed;
+    width: 100%;
+    top: calc(50% - 60px);
+    left: 0;
+}
+
+.banner {
+    overflow: hidden;
+    position: relative;
+    background: var(--theme-red);
+    width: 100%;
+    transform: skewY(-3deg) scaleY(1);
+    height: 160px;
+}
+
+.banner h1,
+.banner h2 {
+    margin: 0;
+    height: 80px;
+    color: var(--theme-gray1);
+}
+
+.banner h1 {
+    font-size: 3em;
+    color: var(--theme-white);
+    text-shadow:
+        0px 5px 2px var(--theme-gray2),
+        2px 3px 2px var(--theme-gray3),
+        -2px 3px 2px var(--theme-gray3);
+}
+
+.banner h2 {
+    font-size: 2em;
+    text-shadow: 0 0 6px var(--theme-white);
+}
