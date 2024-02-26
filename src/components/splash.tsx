@@ -55,7 +55,7 @@ export default function Splash() {
                 rel="noopener noreferrer"
                 target="_blank"
                 aria-label="Downlod Resume"
-                href="emmy_lim_resume.pdf"
+                href="EmmyLim_Resume.pdf"
                 download
               >
                 <FileTextIcon className="mr-2 h-6 w-6" />
