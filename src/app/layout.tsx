@@ -1,12 +1,6 @@
 import type { Metadata } from "next";
-import { Inter, Barlow, Inconsolata, Lato } from "next/font/google";
+import { inter } from "./fonts";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-inter",
-});
 
 export const metadata: Metadata = {
   title: "Emmy Lim 2024",

@@ -1,3 +1,13 @@
-.typestream {
-    font-family: var(--font-roboto-mono);
+.blinker {
+    animation: ping 2s cubic-bezier(0, 0, 0.1, 1) infinite;
+}
+
+@keyframes ping {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 100;
+    }
 }

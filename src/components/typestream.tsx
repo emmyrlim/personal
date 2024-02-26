@@ -1,6 +1,7 @@
-import React from "react";
 import classNames from "classnames";
-import styles from "typestream.module.css";
+import { roboto_mono } from "@/app/fonts";
+import styles from "./typestream.module.css";
+import React from "react";
 
 export default function Typestream({
   className,
@@ -32,6 +33,11 @@ export default function Typestream({
     };
   }, []);
   return (
-    <p className={classNames(styles.typestream, className)}>{subHeader}</p>
+    <div
+      className={classNames(className, roboto_mono.className, "flex gap-x-4")}
+    >
+      <p className={styles.blinker}>{`>`}</p>
+      <p>{subHeader}</p>
+    </div>
   );
 }
