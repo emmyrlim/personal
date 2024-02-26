@@ -24,7 +24,7 @@ export default function Typestream({
     };
     const timeout = setTimeout(() => {
       headerInterval = setInterval(updateSubHeader, 50); // Adjust the interval as needed
-    }, 0);
+    }, 500);
 
     // Clean up interval on component unmount
     return () => {

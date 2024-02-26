@@ -1,13 +1,9 @@
 .blinker {
-    animation: ping 2s cubic-bezier(0, 0, 0.1, 1) infinite;
+    animation: ping 0.8s steps(1) 4;
 }
 
 @keyframes ping {
-    0%,
-    100% {
-        opacity: 0;
-    }
     50% {
-        opacity: 100;
+        opacity: 0;
     }
 }
