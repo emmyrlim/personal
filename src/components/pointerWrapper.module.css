@@ -1,0 +1,28 @@
+.rotate {
+    animation: rotate 8s infinite;
+}
+
+.colorBlob {
+    background: linear-gradient(to right, aquamarine, mediumpurple);
+    animation: blobdeform 8s infinite;
+}
+
+.blur {
+    backdrop-filter: blur(50px);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blobdeform {
+    50% {
+        transform: scale(1, 1.5);
+    }
+}
