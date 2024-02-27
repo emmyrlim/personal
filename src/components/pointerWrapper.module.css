@@ -3,12 +3,31 @@
 }
 
 .colorBlob {
-    background: linear-gradient(to right, aquamarine, mediumpurple);
-    animation: blobdeform 8s infinite;
+    background: linear-gradient(
+        to right,
+        aquamarine,
+        mediumpurple,
+        mediumvioletred
+    );
+    animation:
+        blobdeform 8s infinite,
+        fadeIn 2s;
 }
 
 .blur {
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(100px);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @keyframes rotate {

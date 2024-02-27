@@ -12,9 +12,9 @@ export default function PointerWrapper({
   children: React.ReactNode;
 }) {
   const [mousePos, setMousePos] = React.useState<{
-    x: number;
-    y: number;
-  }>({ x: 0, y: 0 });
+    x: number | string;
+    y: number | string;
+  }>({ x: "50vw", y: "50vh" });
 
   const handlePagePointerMove = (e: PointerEvent<HTMLDivElement>) => {
     setMousePos({ x: e.clientX, y: e.clientY });
@@ -25,12 +25,18 @@ export default function PointerWrapper({
       <motion.div
         className="absolute"
         animate={{ x: mousePos.x, y: mousePos.y }}
+        transition={{
+          type: "spring",
+          bounce: 0.2,
+          duration: 0.2,
+          restSpeed: 1000,
+        }}
       >
         <div className={styles.rotate}>
           <div
             className={classNames(
               styles.colorBlob,
-              "absolute -left-16 -top-16 h-32 w-32 rounded-full",
+              "absolute -left-28 -top-28 size-56 rounded-full",
             )}
           />
         </div>
