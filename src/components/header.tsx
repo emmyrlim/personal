@@ -2,7 +2,7 @@
 
 import React from "react";
 import styles from "./header.module.css";
-import Typestream from "./typestream";
+import Typestream from "@/components/typestream";
 
 const SUBHEADERS = [
   "I make pretty things on the internet",

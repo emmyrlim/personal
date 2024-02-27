@@ -4,18 +4,36 @@
 
 .colorBlob {
     background: linear-gradient(
-        to right,
-        aquamarine,
-        mediumpurple,
-        mediumvioletred
-    );
+            to right,
+            aquamarine,
+            mediumpurple,
+            mediumvioletred,
+            #157a6e,
+            #ffa630
+        )
+        repeat;
+    background-size: 300% 100%;
+    background-position: 0 100%;
     animation:
         blobdeform 8s infinite,
+        colorshift 14s infinite,
         fadeIn 2s;
 }
 
 .blur {
     backdrop-filter: blur(100px);
+}
+
+@keyframes colorshift {
+    0% {
+        background-position: 0% 100%;
+    }
+    50% {
+        background-position: 100%;
+    }
+    100% {
+        background-position: 0% 100%;
+    }
 }
 
 @keyframes fadeIn {
