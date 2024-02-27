@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { inter } from "./fonts";
 import "./globals.css";
+import classNames from "classnames";
 
 export const metadata: Metadata = {
   title: "Emmy Lim 2024",

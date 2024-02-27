@@ -10,63 +10,57 @@ import Intro from "./intro";
 
 export default function Splash() {
   return (
-    <div
-      key="1"
-      className="dark flex min-h-[100dvh] flex-col bg-gray-900 dark:bg-gray-800"
-    >
-      <main className="flex-1">
-        <section className="h-dvh w-full xl:py-24">
-          <div className="flex h-full flex-col items-center justify-center gap-4 px-4 text-center">
-            <Header />
-            <div className="mx-auto grid w-full max-w-[800px] grid-cols-4 items-stretch gap-4 sm:gap-6">
-              <LinkCard
-                title="Github"
-                desc="View my projects"
-                href="https://github.com/emmyrlim/"
-              >
-                <GithubIcon className="h-6 w-6" />
-              </LinkCard>
-              <LinkCard
-                title="CodePen"
-                desc="Demos & Experiments"
-                href="https://www.linkedin.com/in/emmyrlim/"
-              >
-                <CodepenIcon className="h-6 w-6" />
-              </LinkCard>
-              <LinkCard
-                title="LinkedIn"
-                desc="Connect with me"
-                href="https://www.linkedin.com/in/emmyrlim/"
-              >
-                <LinkedinIcon className="h-6 w-6" />
-              </LinkCard>
-              <LinkCard
-                title="Email"
-                desc="Contact me"
-                href="mailto:emmyrlim@gmail.com"
-              >
-                <MailIcon className="h-6 w-6" />
-              </LinkCard>
-            </div>
-            <div>
-              <Link
-                className="flex items-center justify-between rounded-xl bg-red-200 p-4 text-sm shadow-sm transition-colors hover:bg-red-300 hover:text-red-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-950"
-                locale={false}
-                rel="noopener noreferrer"
-                target="_blank"
-                aria-label="Downlod Resume"
-                href="EmmyLim_Resume.pdf"
-                download
-              >
-                <FileTextIcon className="mr-2 h-6 w-6" />
-                <div className="font-semibold text-red-900">Download my CV</div>
-              </Link>
-            </div>
+    <main className="absolute flex-1">
+      <section className="h-dvh w-screen xl:py-24">
+        <div className="flex h-full flex-col items-center justify-center gap-4 px-4 text-center">
+          <Header />
+          <div className="mx-auto grid w-full max-w-[800px] grid-cols-4 items-stretch gap-4 sm:gap-6">
+            <LinkCard
+              title="Github"
+              desc="View my projects"
+              href="https://github.com/emmyrlim/"
+            >
+              <GithubIcon className="h-6 w-6" />
+            </LinkCard>
+            <LinkCard
+              title="CodePen"
+              desc="Demos & Experiments"
+              href="https://www.linkedin.com/in/emmyrlim/"
+            >
+              <CodepenIcon className="h-6 w-6" />
+            </LinkCard>
+            <LinkCard
+              title="LinkedIn"
+              desc="Connect with me"
+              href="https://www.linkedin.com/in/emmyrlim/"
+            >
+              <LinkedinIcon className="h-6 w-6" />
+            </LinkCard>
+            <LinkCard
+              title="Email"
+              desc="Contact me"
+              href="mailto:emmyrlim@gmail.com"
+            >
+              <MailIcon className="h-6 w-6" />
+            </LinkCard>
           </div>
-        </section>
-      </main>
-      {/* <Intro /> */}
-    </div>
+          <div>
+            <Link
+              className="flex items-center justify-between rounded-xl bg-red-200 p-4 text-sm shadow-sm transition-colors hover:bg-red-300 hover:text-red-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-red-950"
+              locale={false}
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Downlod Resume"
+              href="EmmyLim_Resume.pdf"
+              download
+            >
+              <FileTextIcon className="mr-2 h-6 w-6" />
+              <div className="font-semibold text-red-900">Download my CV</div>
+            </Link>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
 
