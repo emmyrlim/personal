@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { inter } from "./fonts";
 import "./globals.css";
-import classNames from "classnames";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "Emmy Lim 2024",
@@ -16,7 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
