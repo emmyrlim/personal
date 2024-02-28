@@ -10,12 +10,12 @@ export default function Typestream({
   className?: string;
   text: string;
 }) {
-  const [subHeader, setSubHeader] = React.useState("");
+  const [typeText, setTypeText] = React.useState("");
 
   React.useEffect(() => {
     let headerInterval: NodeJS.Timeout;
     const updateSubHeader = () => {
-      setSubHeader((prevHeader) => {
+      setTypeText((prevHeader) => {
         if (prevHeader.length === text.length) {
           clearInterval(headerInterval);
         }
@@ -37,7 +37,7 @@ export default function Typestream({
       className={classNames(className, roboto_mono.className, "flex gap-x-4")}
     >
       <p className={styles.blinker}>{`>`}</p>
-      <p>{subHeader}</p>
+      <p>{typeText}</p>
     </div>
   );
 }

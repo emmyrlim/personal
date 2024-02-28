@@ -54,7 +54,7 @@ export default async function Splash() {
           download
         >
           <FileTextIcon className="mr-2 h-6 w-6" />
-          <div className="font-semibold text-red-900">Download my CV</div>
+          <div className="font-semibold text-red-900">Download Resume</div>
         </Link>
       </div>
     </div>

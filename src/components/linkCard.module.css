@@ -1,29 +1,35 @@
 .linkCard {
     --border-angle: 0turn;
-    --main-bg: conic-gradient(from var(--border-angle), #fff, #fff);
-    border: solid 2px transparent;
+    --main-bg: conic-gradient(from var(--border-angle), #eee, #eee);
+    --main-bg-hover: conic-gradient(from var(--border-angle), #fff, #fff);
+    border: solid 2px #fff;
     --gradient-border: conic-gradient(
         from var(--border-angle),
         transparent,
-        mediumpurple 80%,
-        mediumvioletred 99%,
+        mediumpurple 17%,
+        mediumvioletred 34%,
+        transparent 50%,
+        mediumpurple 67%,
+        mediumvioletred 84%,
         transparent
     );
     background:
         var(--main-bg) padding-box,
-        var(--main-bg) border-box,
+        var(--gradient-border) border-box,
         var(--main-bg) border-box;
     background-position: center center;
     animation: bg-spin 6s linear infinite;
     animation-play-state: paused;
+    transition: background 1000ms linear;
 }
 
 .linkCard:hover {
     animation-play-state: running;
+    border: solid 2px transparent;
     background:
-        var(--main-bg) padding-box,
+        var(--main-bg-hover) padding-box,
         var(--gradient-border) border-box,
-        var(--main-bg) border-box;
+        var(--main-bg-hover) border-box;
 }
 
 @keyframes bg-spin {
