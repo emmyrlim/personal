@@ -1,0 +1,100 @@
+.stage {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  color: #fbfef9;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  cursor: default;
+}
+.playing { cursor: none; }
+
+/* pause overlay: two pixel bars + PAUSED, over the greyed-out picture */
+.pauseOverlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+  cursor: default;
+}
+.pauseIcon { display: flex; gap: 14px; filter: drop-shadow(5px 5px 0 #ff3c8c) drop-shadow(-5px -5px 0 #2fd4ff); }
+.pauseIcon span { width: 22px; height: 70px; background: #fbfef9; display: block; }
+.pauseWord { font-size: clamp(18px, 4vw, 44px); color: #fbfef9; letter-spacing: 0.08em; text-shadow: 5px 5px 0 #ff3c8c, -5px -5px 0 #2fd4ff; animation: blink 1.2s steps(1) infinite; }
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  transition: opacity 0.2s;
+}
+.videoPaused { filter: grayscale(1) brightness(0.55); opacity: 0.6 !important; }
+.video::-webkit-media-controls { display: none !important; }
+.video::-webkit-media-controls-enclosure { display: none !important; }
+
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 24px;
+  background: #000;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  text-align: center;
+  line-height: 1.6;
+}
+.titleScreen { cursor: pointer; }
+
+/* loading */
+.loadingLabel { font-size: clamp(12px, 2.2vw, 20px); letter-spacing: 0.08em; }
+.barFrame {
+  width: min(70vw, 560px);
+  height: 26px;
+  border: 4px solid #fbfef9;
+  padding: 4px;
+  box-shadow: 0 0 0 4px #000, 0 0 0 6px #333;
+}
+.barFill { height: 100%; background: #fbfef9; transition: width 0.15s steps(4); }
+.barIndeterminate {
+  height: 100%; width: 30%; background: #fbfef9;
+  animation: slide 1.1s steps(8) infinite;
+}
+@keyframes slide { from { margin-left: 0 } to { margin-left: 70% } }
+.hint { font-size: clamp(8px, 1.3vw, 12px); color: #7e7d7f; letter-spacing: 0.1em; }
+
+/* title / clear */
+.p12 { font-size: clamp(10px, 1.8vw, 16px); color: #fbfef9; }
+.p1 { color: #ff3c8c; }
+.p2 { color: #2fd4ff; }
+.title {
+  margin: 0;
+  font-size: clamp(26px, 6.5vw, 72px);
+  letter-spacing: 0.04em;
+  color: #fbfef9;
+  text-shadow: 6px 6px 0 #ff3c8c, -6px -6px 0 #2fd4ff;
+}
+.sub { font-size: clamp(10px, 1.8vw, 16px); color: #d4d3d4; letter-spacing: 0.12em; }
+.press {
+  margin-top: 18px;
+  font-size: clamp(13px, 2.4vw, 22px);
+  color: #fbfef9;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink { 50% { opacity: 0 } }
+.tiny { font-size: clamp(7px, 1.1vw, 10px); color: #7e7d7f; letter-spacing: 0.1em; }
+
+/* CRT dressing: faint scanlines over everything, a white kick when START is pressed */
+.scanlines {
+  position: absolute; inset: 0; pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0.18) 0 2px, transparent 2px 4px);
+  mix-blend-mode: multiply;
+}
+.flash { position: absolute; inset: 0; background: #fff; pointer-events: none; animation: fade 0.14s linear forwards; }
+@keyframes fade { to { opacity: 0 } }
