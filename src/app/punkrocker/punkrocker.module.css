@@ -93,7 +93,7 @@
 /* CRT dressing: faint scanlines over everything, a white kick when START is pressed */
 .scanlines {
   position: absolute; inset: 0; pointer-events: none;
-  background: repeating-linear-gradient(0deg, rgba(0,0,0,0.18) 0 2px, transparent 2px 4px);
+  background: repeating-linear-gradient(0deg, rgba(0,0,0,0.12) 0 2px, transparent 2px 4px);
   mix-blend-mode: multiply;
 }
 .flash { position: absolute; inset: 0; background: #fff; pointer-events: none; animation: fade 0.14s linear forwards; }

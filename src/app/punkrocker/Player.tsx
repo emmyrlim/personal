@@ -177,7 +177,7 @@ export default function Player() {
         </button>
       )}
 
-      <div className={styles.scanlines} aria-hidden />
+      {(phase !== "playing" || paused) && <div className={styles.scanlines} aria-hidden />}
       {flash && <div className={styles.flash} aria-hidden />}
     </div>
   );
